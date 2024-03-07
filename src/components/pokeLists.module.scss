@@ -1,0 +1,15 @@
+@use '../styles/mixin.scss' as m;
+
+.wrapper {
+  flex: 1;
+  margin: 4px;
+  padding: 24px 12px;
+  background-color: m.$white;
+  border-radius: 8px;
+  @include m.shadow-inset;
+  color: m.$dark;
+}
+.cards {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}

@@ -1,16 +1,17 @@
+@use "../styles/mixin.scss" as m;
 
 .wrapper {
-  background: #dc0a2d;
+  background: m.$primary;
   display: flex;
   justify-content: space-between;
-  padding: 12px 10px 24px;
+  padding: 12px 10px 20px;
 }
 .header {
+  @include m.headline;
   display: flex;
   align-items: center;
   column-gap: 10px;
-  font-size: 24px;
-  color: #ffffff;
+  color: m.$white;
 }
 .filter {
   display: flex;
@@ -18,19 +19,19 @@
   column-gap: 16px;
 }
 .input {
-  background: #ffffff;
+  background: m.$white;
   border: None;
   border-radius: 16px;
   height: 16px;
   width: 120%;
   padding: 8px 16px 8px 36px;
-  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.25) inset;
+  @include m.shadow-inset;
   cursor: auto;
-  color: black;
+  color: m.$dark;
 }
 ::placeholder {
   font-family: Poppins;
-  color: #666666;
+  color: m.$medium;
 }
 .form {
   width: 280px;
@@ -44,7 +45,7 @@
   }
 }
 .sortButton {
-  background-color: #ffffff;
+  background-color: m.$white;
   border-radius: 50%;
   border: none;
   width: 32px;
@@ -52,7 +53,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.25) inset;
+  @include m.shadow-inset;
   img {
     width: 12px;
   }

@@ -1,3 +1,79 @@
-
 // Color
 $primary: #dc0a2d;
+$dark: #212121;
+$medium: #666666;
+$light: #e0e0e0;
+$background: #efefefef;
+$white: #ffffff;
+// Type colors
+$bug-color: #a7b723;
+$dark-color: #75574c;
+$dragon-color: #7037ff;
+$electric-color: #f9cf30;
+$fairy-color: #e69eac;
+$fighting-color: #c12239;
+$fire-color: #f57d31;
+$flying-color: #a891ec;
+$ghost-color: #70559b;
+$normal-color: #aaa67f;
+$grass-color: #74cb48;
+$ground-color: #dec16b;
+$ice-color: #9ad6df;
+$poison-color: #a43e9e;
+$psychic-color: #fb5584;
+$rock-color: #b69e31;
+$steel-color: #b7b9d0;
+$water-color: #6493eb;
+
+// Shadow
+@mixin shadow-inset() {
+  box-shadow: 0 1px 3px 1px rgba($dark, 0.25) inset;
+}
+// Text Formats
+@mixin headline() {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+@mixin subtitle3() {
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 16px;
+}
+
+@mixin subtitle1() {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+@mixin subtitle2() {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+@mixin body3() {
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 16px;
+}
+
+@mixin body1() {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+@mixin body2() {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+@mixin caption() {
+  font-weight: normal;
+  font-size: 8px;
+  line-height: 12px;
+}
