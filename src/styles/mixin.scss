@@ -27,53 +27,60 @@ $water-color: #6493eb;
 
 // Shadow
 @mixin shadow-inset() {
-  box-shadow: 0 1px 3px 1px rgba($dark, 0.25) inset;
+  box-shadow: 0 1px * 2.0 3px * 2.0 1px * 2.0
+    rgba($dark, 0.25) inset;
+}
+@mixin shadow-2dp() {
+  box-shadow: 0 1px * 2.0 3px * 2.0 1px * 2.0 rgba($dark, 0.2);
+}
+@mixin shadow-6dp() {
+  box-shadow: 0 3px 12px 3px rgba($dark, 0.2);
 }
 // Text Formats
 @mixin headline() {
   font-weight: bold;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 24px * 1.2;
+  line-height: 32px * 1.2;
 }
 
 @mixin subtitle3() {
   font-weight: bold;
-  font-size: 10px;
-  line-height: 16px;
+  font-size: 10px * 2.0;
+  line-height: 16px * 2.0;
 }
 
 @mixin subtitle1() {
   font-weight: bold;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 14px * 2.0;
+  line-height: 16px * 2.0;
 }
 
 @mixin subtitle2() {
   font-weight: bold;
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 12px * 2.0;
+  line-height: 16px * 2.0;
 }
 
 @mixin body3() {
   font-weight: normal;
-  font-size: 10px;
-  line-height: 16px;
+  font-size: 10px * 2.0;
+  line-height: 16px * 2.0;
 }
 
 @mixin body1() {
   font-weight: normal;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 14px * 2.0;
+  line-height: 16px * 2.0;
 }
 
 @mixin body2() {
   font-weight: normal;
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 12px * 2.0;
+  line-height: 16px * 2.0;
 }
 
 @mixin caption() {
   font-weight: normal;
-  font-size: 8px;
-  line-height: 12px;
+  font-size: 8px * 2.0;
+  line-height: 12px * 2.0;
 }

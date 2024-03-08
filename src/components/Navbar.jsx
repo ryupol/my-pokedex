@@ -9,10 +9,10 @@ export default function Navbar() {
   const [sortText, setSortText] = useState(false);
   return (
     <div className={styles.wrapper}>
-      <div className={styles.header}>
+      <a className={styles.header} href="/">
         <img src={pokeIcon} alt="Pokeball Icon" />
-        <b>Pokédex</b>
-      </div>
+        <span>Pokédex</span>
+      </a>
       <div className={styles.filter}>
         <form className={styles.form}>
           <img src={searchIcon} alt="Search Icon" />

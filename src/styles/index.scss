@@ -6,11 +6,28 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
   color: m.$white;
   background-color: m.$primary;
 }
 
 body {
   margin: 0;
+}
+
+// Scrollbar
+::-webkit-scrollbar {
+  border-radius: 6px;
+  width: 16px;
+}
+::-webkit-scrollbar-track
+{
+	@include m.shadow-inset;
+	border-radius: 6px;
+	background-color: m.$white;
+}
+::-webkit-scrollbar-thumb
+{
+	border-radius: 6px;
+	@include m.shadow-inset;
+	background-color: m.$primary;
 }
