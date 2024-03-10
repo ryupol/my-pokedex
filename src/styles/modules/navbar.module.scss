@@ -1,7 +1,7 @@
-@use "../styles/mixin.scss" as m;
+@use "../mixin.scss" as m;
 
 .wrapper {
-  background: m.$primary;
+  // background: m.$primary;
   display: flex;
   flex-wrap: wrap;
   row-gap: 12px;
@@ -41,11 +41,22 @@
   font-size: 12px * 1.2;
   &:focus {
     outline: none;
+    @include m.shadow-2dp;
   }
 }
 ::placeholder {
   font-family: Poppins;
   color: m.$medium;
+}
+.clear {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 36px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 .form {
   width: 280px * 1.2;
@@ -68,10 +79,34 @@
   justify-content: center;
   align-items: center;
   @include m.shadow-inset;
+  position: relative;
+  transition: box-shadow 0.5s;
+  cursor: pointer;
+  &:hover {
+    @include m.shadow-2dp;
+    .tooltip {
+      opacity: 1;
+    }
+  }
   img {
     width: 12px * 1.2;
   }
-  &:hover {
-    box-shadow: none;
-  }
+}
+
+.tooltip {
+  z-index: 9;
+  opacity: 0;
+  font-family: Poppins;
+  border-radius: 6px;
+  font-weight: bold;
+  color: m.$white;
+  background-color: rgba(m.$dark, 0.8);
+  @include m.caption;
+  position: absolute;
+  top: 55px;
+  padding: 6px 12px;
+  white-space: nowrap;
+  right: -12px;
+  transition: opacity 0.4s;
+  pointer-events: none;
 }
