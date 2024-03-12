@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
 import NotFound from "./NotFound";
-import PokeDetails from './PokeDetails';
+import PokeDetails from './pokePages/PokeDetails';
 export default function App() {
   return (
     <Router>

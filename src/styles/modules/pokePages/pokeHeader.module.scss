@@ -1,0 +1,76 @@
+@use "../../mixin.scss" as m;
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 50%;
+  position: relative;
+  text-align: center;
+  padding: 8px;
+  background-image: url("../../../assets/pokeball-background.svg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  img {
+    pointer-events: none;
+  }
+}
+.leftArrow {
+  position: absolute;
+  top: 55%;
+  left: 4%;
+}
+.rightArrow {
+  position: absolute;
+  top: 55%;
+  right: 4%;
+}
+.nameWrap {
+  position: relative;
+  margin: 24px 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: m.$white;
+  z-index: 1;
+}
+.name {
+  display: flex;
+  align-items: flex-end;
+}
+.imageWrap {
+  margin-bottom: 10%;
+}
+.pokeName {
+  margin-left: 16px;
+  font-size: 36px;
+  line-height: 48px;
+}
+.pokeId {
+  font-size: 16px;
+  line-height: 24px;
+}
+.pokemon {
+  position: relative;
+  width: 356px;
+  z-index: 9;
+}
+.type {
+  font-family: Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  border: none;
+  border: 2px solid white;
+  color: m.$white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin: 0 12px;
+}
+
+@media (max-width: 960px) {
+  .wrapper {
+    width: 90%;
+  }
+  .pokemon {
+    margin-top: 32px;
+  }
+}

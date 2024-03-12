@@ -6,7 +6,7 @@ import styles from "../styles/modules/pokeLists.module.scss";
 export default function PokeLists({ search, sortNum }) {
   const [pokemons, setPokemons] = useState([]);
   useEffect(() => {
-    axios.get(POKEMON_API_URL + "?limit=200").then((res) => {
+    axios.get(POKEMON_API_URL + "?limit=1008").then((res) => {
       if (res.status >= 200 && res.status < 300) {
         const { results } = res.data;
         let pokeData = [];

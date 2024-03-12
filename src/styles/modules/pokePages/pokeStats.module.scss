@@ -1,0 +1,41 @@
+@use "../../mixin.scss" as m;
+
+.headline {
+  @include m.subtitle2;
+  margin: 0;
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+}
+.info {
+  text-align: right;
+  padding: 0 24px;
+  flex: 1;
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+}
+.name {
+  border-right: 2px solid m.$light;
+  padding: 0 24px 0 12px;
+  width: 10%;
+  text-align: right;
+}
+.number {
+  text-align: right;
+  width: 30px;
+}
+.bar {
+  width: 100%;
+  margin-left: 16px;
+  height: 10px;
+  border-radius: 5px;
+}
+
+.progress {
+  transition: width 1s ease-out;
+  height: 10px;
+  border-radius: 5px;
+}

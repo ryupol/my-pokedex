@@ -9,14 +9,8 @@
   @include m.shadow-inset;
   color: m.$dark;
   overflow-y: auto;
-  display: flex;
-  justify-content: space-evenly;
-  align-content: flex-start;
-  row-gap: 16px;
-  column-gap: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
   flex-wrap: wrap;
-}
-.empty {
-  width: 104px;
-  height: 108px;
 }

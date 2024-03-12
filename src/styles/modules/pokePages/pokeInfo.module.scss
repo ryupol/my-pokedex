@@ -1,0 +1,42 @@
+@use "../../mixin.scss" as m;
+
+.wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.headline {
+  @include m.subtitle2;
+  margin: 0;
+}
+
+.box {
+  padding: 0 6px;
+  text-align: center;
+  white-space: nowrap;
+  img {
+    width: 16px * 1.2;
+    height: 16px * 1.2;
+    margin: -6px 12px 0 0;
+  }
+}
+.line {
+  height: 72px;
+  border-right: 2px solid m.$light;
+}
+.weightInfo,
+.heightInfo,
+.movesInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 72px;
+}
+.movesInfo {
+  flex-direction: column;
+}
+.caption {
+  font-size: 14px;
+  line-height: 18px;
+  color: m.$medium;
+}
