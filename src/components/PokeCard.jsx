@@ -1,9 +1,8 @@
 import React from "react";
 import styles from "../styles/modules/pokeCard.module.scss";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 export default function PokeCard(props) {
   const { name, image, id } = props;
-
 
   return (
     <Link className={styles.wrapper} to={"/pokemon/" + id}>

@@ -6,8 +6,17 @@ import sortTextIcon from "../assets/sort-text.svg";
 import closeIcon from "../assets/close.svg";
 import styles from "../styles/modules/navbar.module.scss";
 
-export default function Navbar({ search, setSearch, sortNum, setSortNum }) {
+// Redux
+import { useDispatch, useSelector } from "react-redux";
+import { setSortNum } from "../store/sortSlice";
+import { setSearch } from "../store/searchSlice";
+
+export default function Navbar() {
   const inputRef = useRef();
+  const dispatch = useDispatch();
+  const {search} = useSelector((state) => state.search);
+  const {sortNum} = useSelector((state) => state.sortNum);
+
   return (
     <div className={styles.wrapper}>
       <a className={styles.header} href="/">
@@ -25,7 +34,7 @@ export default function Navbar({ search, setSearch, sortNum, setSortNum }) {
             src={search.length === 0 ? searchIcon : closeIcon}
             alt="Search or Clear Icon"
             onClick={() => {
-              setSearch("");
+              dispatch(setSearch(""));
             }}
             style={
               search.length === 0
@@ -37,13 +46,13 @@ export default function Navbar({ search, setSearch, sortNum, setSortNum }) {
             type="text"
             className={styles.input}
             value={search}
-            onChange={(e) => setSearch(e.target.value)}
+            onChange={(e) => dispatch(setSearch(e.target.value))}
             placeholder="Search"
           />
         </form>
         <button
           className={styles.sortButton}
-          onClick={() => setSortNum(!sortNum)}
+          onClick={() => dispatch(setSortNum(!sortNum))}
         >
           <img src={sortNum ? sortNumIcon : sortTextIcon} alt="Sort Icon" />
           <span className={styles.tooltip}>

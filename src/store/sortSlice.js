@@ -9,7 +9,7 @@ const sortSlice = createSlice({
   initialState,
   reducers: {
     setSortNum(state) {
-      state.search = !state.search;
+      state.sortNum = !state.sortNum;
     },
   },
 });

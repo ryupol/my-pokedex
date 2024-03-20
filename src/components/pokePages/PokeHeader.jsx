@@ -4,8 +4,11 @@ import backIcon from "../../assets/back-arrow.svg";
 import leftIcon from "../../assets/chevron-left.svg";
 import rightIcon from "../../assets/chevron-right.svg";
 import s from "../../styles/modules/pokePages/pokeHeader.module.scss";
+import { useSelector } from "react-redux";
+export default function pokeHeader({ id}) {
+  const details = useSelector((state) => state.pokemon.details);
+  const colors = useSelector((state) => state.pokemon.colors);
 
-export default function pokeHeader({ id, details, colors }) {
   return (
     <div className={s.wrapper}>
       <div className={s.nameWrap}>

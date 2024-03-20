@@ -3,8 +3,15 @@ import axios from "axios";
 import PokeCard from "./PokeCard";
 import { POKEMON_API_URL, IMAGE_API_URL } from "../config";
 import styles from "../styles/modules/pokeLists.module.scss";
-export default function PokeLists({ search, sortNum }) {
+
+// Redux
+import { useSelector } from "react-redux";
+
+export default function PokeLists() {
   const [pokemons, setPokemons] = useState([]);
+  const { search } = useSelector((state) => state.search);
+  const { sortNum } = useSelector((state) => state.sortNum);
+
   useEffect(() => {
     axios.get(POKEMON_API_URL + "?limit=1008").then((res) => {
       if (res.status >= 200 && res.status < 300) {

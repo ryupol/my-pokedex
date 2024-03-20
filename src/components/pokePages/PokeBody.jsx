@@ -1,8 +1,10 @@
 import s from "../../styles/modules/pokePages/pokeBody.module.scss";
 import PokeInfo from "./PokeInfo";
 import PokeStats from "./PokeStats";
-
-export default function PokeBody({ details, colors }) {
+import { useSelector } from "react-redux";
+export default function PokeBody() {
+  const details = useSelector((state) => state.pokemon.details);
+  const colors = useSelector((state) => state.pokemon.colors);
   return (
     <div className={s.wrapper}>
       <PokeInfo details={details} colors={colors} />

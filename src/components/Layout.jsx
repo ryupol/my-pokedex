@@ -7,12 +7,7 @@ export default function Layout() {
   const [sortNum, setSortNum] = useState(true);
   return (
     <div className={styles.container}>
-      <Navbar
-        search={search}
-        setSearch={setSearch}
-        sortNum={sortNum}
-        setSortNum={setSortNum}
-      />
+      <Navbar />
       <PokeLists search={search} sortNum={sortNum} />
     </div>
   );
